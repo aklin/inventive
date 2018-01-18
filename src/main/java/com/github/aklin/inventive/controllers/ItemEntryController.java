@@ -1,0 +1,31 @@
+package com.github.aklin.inventive.controllers;
+
+import com.github.aklin.inventive.services.InventoryEntryService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class ItemEntryController {
+
+	private InventoryEntryService entryService;
+
+	@Autowired
+	public void setEntryService(InventoryEntryService entryService) {
+		this.entryService = entryService;
+	}
+
+	@RequestMapping("/items")
+	public String listEntries(Model model) {
+		model.addAttribute("items", entryService.listAll());
+		return "starter";
+	}
+
+	@RequestMapping("/item/{id}")
+	public String listEntry(@PathVariable long id, Model model){
+		model.addAttribute("item", entryService.get(id));
+		return "item";
+	}
+}
