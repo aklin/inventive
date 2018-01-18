@@ -1,4 +1,4 @@
-package com.github.aklin.inventive.domain.concrete;
+package com.github.aklin.inventive.domain.concrete.inventory;
 
 import com.github.aklin.inventive.domain.InventoryEntry;
 
