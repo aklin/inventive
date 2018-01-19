@@ -2,8 +2,10 @@ package com.github.aklin.inventive.domain.concrete.inventory;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.github.aklin.inventive.domain.InventoryEntry;
 
+@JsonDeserialize(using = ItemEntryDeserializer.class)
 public class ItemEntry implements InventoryEntry {
 	private final long id;
 	private final String name;
