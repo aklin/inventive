@@ -1,5 +1,7 @@
 package com.github.aklin.inventive.domain.concrete.inventory;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.aklin.inventive.domain.InventoryEntry;
 
 public class ItemEntry implements InventoryEntry {
@@ -7,7 +9,8 @@ public class ItemEntry implements InventoryEntry {
 	private final String name;
 	private final String description;
 
-	public ItemEntry(long id, String name, String description) {
+	@JsonCreator
+	public ItemEntry(@JsonProperty("id") long id, @JsonProperty("name") String name, @JsonProperty("description") String description) {
 
 		if (id < 1) {
 			throw new IllegalArgumentException("ID must be greater than 0");
