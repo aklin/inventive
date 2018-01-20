@@ -32,12 +32,20 @@
 				<!-- /.box-body -->
 			</div>
 		</div>
-	</div>
-	<div class="container" th:if="${item}">
-		<h2><span th:text="${item.getName()}">[name]</span></h2>
 
+		<div class="col-md-3">
+			<div class="box box-default" th:classappend="${item.getParent() == null}? 'box-warning box-solid' ">
+				<div class="box-header with-border">
+					<h3 class="box-title">Container Info</h3>
+				</div>
+				<div class="box-body" th:if="${item?.getParent()}" th:text="${item.getParent().getName()}"></div>
+				<div class="box-body" th:if="${item.getParent() == null}">
+					<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> No parent container found
+				</div>
+				<!-- /.box-body -->
+			</div>
+		</div>
 
-		<p th:text="${item.getDescription()}"></p>
 
 	</div>
 </section>
