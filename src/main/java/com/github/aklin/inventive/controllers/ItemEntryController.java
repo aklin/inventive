@@ -29,7 +29,7 @@ public class ItemEntryController {
 	public String listEntries(Model model) {
 		model.addAttribute("user", userService.getCurrentlyLoggedIn());
 		model.addAttribute("items", entryService.listAll());
-		return "items";
+		return "content/items";
 	}
 
 	@RequestMapping("/item/{id}")
