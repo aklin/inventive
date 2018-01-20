@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/v0")
 public class ContainerAPIController {
 
 	private final ContainerServiceInterface containerService;
@@ -18,7 +19,7 @@ public class ContainerAPIController {
 		this.containerService = containerService;
 	}
 
-	@RequestMapping("/api/v0/containers")
+	@RequestMapping("/containers")
 	public List<ContainerInterface> listAll() {
 		return containerService.listAll();
 	}
