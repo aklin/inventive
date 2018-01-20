@@ -39,12 +39,15 @@ public class SimpleContainer implements ContainerInterface {
 		return 0;
 	}
 
-
 	@Override
 	public String getDescription() {
-		return null;
+		return description;
 	}
 
+	/**
+	 * Can be a location or another Container
+	 * @return
+	 */
 	@Override
 	public Hierarchical getParent() {
 		return null;
@@ -52,11 +55,11 @@ public class SimpleContainer implements ContainerInterface {
 
 	@Override
 	public long getID() {
-		return 0;
+		return id;
 	}
 
 	@Override
 	public String getName() {
-		return null;
+		return name;
 	}
 }
