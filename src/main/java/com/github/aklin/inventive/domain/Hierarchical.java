@@ -1,6 +1,7 @@
 package com.github.aklin.inventive.domain;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,7 @@ public interface Hierarchical {
 	 *
 	 * @return
 	 */
+	@JsonIgnore
 	public default List<Hierarchical> getFullLocation() {
 		final List<Hierarchical> ret;
 

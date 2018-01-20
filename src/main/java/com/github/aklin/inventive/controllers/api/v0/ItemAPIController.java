@@ -23,5 +23,3 @@ public class ItemAPIController {
 		return entryService.listAll();
 	}
 }
-
-
