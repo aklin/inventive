@@ -38,13 +38,15 @@
 
 		<!-- Sidebar Menu -->
 		<ul class="sidebar-menu" data-widget="tree">
-			<li class="header">HEADER</li>
+			<li class="header">INVENTORY</li>
 			<!-- Optionally, you can add icons to the links -->
-			<li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-			<li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+			<li class="active"><a href="#"><i class="fa fa-link"></i> <span>Locations</span></a></li>
+			<li><a href="#"><i class="fa fa-link"></i> <span>Types</span></a></li>
+			<li><a href="#"><i class="fa fa-link"></i> <span>Items</span> <span class="label pull-right" th:text="${#lists.size(items)}">[count]</span></a></li>
 			<li class="treeview">
-				<a href="#"><i class="fa fa-link"></i>Items<span class="pull-right-container"><span><span
-						class="label pull-right" th:text="${#lists.size(items)}">[count]</span></span> </span>
+				<a href="#"><i class="fa fa-link"></i>Containers<span class="pull-right-container"><span>
+
+				</span> </span>
 					<span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
