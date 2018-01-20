@@ -5,16 +5,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-<th:block th:include="fragments/_head"></th:block>
+<th:block th:insert="fragments/_head :: head"></th:block>
 
 
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-	<th:block th:include="fragments/_nav"></th:block>
+	<th:block th:insert="fragments/_nav :: nav"></th:block>
 
 
-	<th:block th:include="fragments/_sidebar"></th:block>
+	<th:block th:insert="fragments/_sidebar :: sidebar-main"></th:block>
 
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
@@ -33,9 +33,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	</div>
 	<!-- /.content-wrapper -->
 
-
-	<th:block th:include="fragments/_footer"></th:block>
-
+	<th:block th:insert="fragments/_footer :: bottom"></th:block>
+	<th:block th:insert="fragments/_footer :: aside-right"></th:block>
+	<th:block th:insert="fragments/_footer :: aside-control"></th:block>
 </div>
 <!-- ./wrapper -->
 
