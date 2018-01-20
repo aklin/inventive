@@ -37,6 +37,6 @@ public class ItemEntryController {
 		model.addAttribute("user", userService.getCurrentlyLoggedIn());
 		model.addAttribute("items", entryService.listAll());
 		model.addAttribute("item", entryService.get(id));
-		return "item";
+		return "content/item";
 	}
 }

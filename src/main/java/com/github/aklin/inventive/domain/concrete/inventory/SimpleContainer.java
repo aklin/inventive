@@ -2,6 +2,7 @@ package com.github.aklin.inventive.domain.concrete.inventory;
 
 import com.github.aklin.inventive.domain.ContainerInterface;
 import com.github.aklin.inventive.domain.Hierarchical;
+import com.github.aklin.inventive.domain.Locatable;
 import com.github.aklin.inventive.domain.TypeInterface;
 
 public class SimpleContainer implements ContainerInterface {
@@ -44,15 +45,6 @@ public class SimpleContainer implements ContainerInterface {
 		return description;
 	}
 
-	/**
-	 * Can be a location or another Container
-	 * @return
-	 */
-	@Override
-	public Hierarchical getParent() {
-		return null;
-	}
-
 	@Override
 	public long getID() {
 		return id;
@@ -61,5 +53,10 @@ public class SimpleContainer implements ContainerInterface {
 	@Override
 	public String getName() {
 		return name;
+	}
+
+	@Override
+	public Locatable getParent() {
+		return null;
 	}
 }

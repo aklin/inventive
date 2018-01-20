@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.github.aklin.inventive.domain.InventoryEntry;
+import com.github.aklin.inventive.domain.Locatable;
 
 @JsonDeserialize(using = ItemEntryDeserializer.class)
 public class ItemEntry implements InventoryEntry {
@@ -43,5 +44,10 @@ public class ItemEntry implements InventoryEntry {
 	@Override
 	public String toString(){
 		return "ID: "+id+", Name: "+name+", Description: "+description;
+	}
+
+	@Override
+	public Locatable getParent() {
+		return null;
 	}
 }
