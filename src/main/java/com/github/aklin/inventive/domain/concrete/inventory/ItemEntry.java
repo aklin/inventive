@@ -6,22 +6,11 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.github.aklin.inventive.domain.InventoryEntry;
 import com.github.aklin.inventive.domain.Locatable;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Version;
-
 @JsonDeserialize(using = ItemEntryDeserializer.class)
 public class ItemEntry implements InventoryEntry {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private final long id;
 	private final String name;
 	private final String description;
-
-	@Version
-	private long version;
 
 	@JsonCreator
 	public ItemEntry(@JsonProperty("id") long id, @JsonProperty("name") String name, @JsonProperty("description") String description) {
