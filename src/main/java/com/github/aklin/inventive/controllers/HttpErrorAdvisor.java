@@ -18,8 +18,8 @@ public class HttpErrorAdvisor {
 	}
 
 	@ExceptionHandler(NoHandlerFoundException.class)
-	public void handleError404(Model model) {
+	public String handleError404(Model model) {
 		model.addAttribute("user", userService.getCurrentlyLoggedIn());
-//		return "error/404";
+		return "error/404";
 	}
 }
