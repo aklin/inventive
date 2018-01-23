@@ -1,6 +1,6 @@
 package com.github.aklin.inventive.controllers.api.v0;
 
-import com.github.aklin.inventive.domain.InventoryEntry;
+import com.github.aklin.inventive.domain.inv.InventoryEntry;
 import com.github.aklin.inventive.services.InventoryEntryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

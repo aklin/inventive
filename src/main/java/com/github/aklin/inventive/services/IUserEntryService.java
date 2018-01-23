@@ -1,7 +1,6 @@
 package com.github.aklin.inventive.services;
 
-import com.github.aklin.inventive.domain.UserInterface;
-import com.github.aklin.inventive.domain.concrete.users.User;
+import com.github.aklin.inventive.domain.inv.UserInterface;
 
 import java.util.List;
 

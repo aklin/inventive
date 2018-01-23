@@ -3,7 +3,7 @@ package com.github.aklin.inventive.domain.concrete.inventory;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.github.aklin.inventive.domain.InventoryEntry;
+import com.github.aklin.inventive.domain.inv.InventoryEntry;
 import com.github.aklin.inventive.domain.core.Locatable;
 
 import javax.persistence.Entity;

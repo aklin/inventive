@@ -1,6 +1,6 @@
 package com.github.aklin.inventive.services;
 
-import com.github.aklin.inventive.domain.TypeInterface;
+import com.github.aklin.inventive.domain.inv.TypeInterface;
 
 import java.util.List;
 

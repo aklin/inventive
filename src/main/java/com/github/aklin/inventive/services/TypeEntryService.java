@@ -1,6 +1,6 @@
 package com.github.aklin.inventive.services;
 
-import com.github.aklin.inventive.domain.TypeInterface;
+import com.github.aklin.inventive.domain.inv.TypeInterface;
 import com.github.aklin.inventive.domain.concrete.inventory.TypeEntry;
 import org.springframework.stereotype.Service;
 

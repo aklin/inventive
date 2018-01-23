@@ -1,7 +1,7 @@
 package com.github.aklin.inventive.domain.concrete.users;
 
-import com.github.aklin.inventive.domain.UserGroupInterface;
-import com.github.aklin.inventive.domain.UserInterface;
+import com.github.aklin.inventive.domain.inv.UserGroupInterface;
+import com.github.aklin.inventive.domain.inv.UserInterface;
 import com.github.aklin.inventive.domain.core.Hierarchical;
 
 import javax.persistence.GeneratedValue;

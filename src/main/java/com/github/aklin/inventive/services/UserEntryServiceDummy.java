@@ -1,6 +1,6 @@
 package com.github.aklin.inventive.services;
 
-import com.github.aklin.inventive.domain.UserInterface;
+import com.github.aklin.inventive.domain.inv.UserInterface;
 import com.github.aklin.inventive.domain.concrete.users.User;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
 package com.github.aklin.inventive.services;
 
-import com.github.aklin.inventive.domain.InventoryEntry;
+import com.github.aklin.inventive.domain.inv.InventoryEntry;
 
 import java.util.List;
 

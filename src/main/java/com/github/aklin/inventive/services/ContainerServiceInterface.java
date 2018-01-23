@@ -1,6 +1,6 @@
 package com.github.aklin.inventive.services;
 
-import com.github.aklin.inventive.domain.ContainerInterface;
+import com.github.aklin.inventive.domain.inv.ContainerInterface;
 
 import java.util.List;
 
