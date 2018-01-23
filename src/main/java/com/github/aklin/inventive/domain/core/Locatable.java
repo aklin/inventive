@@ -1,4 +1,4 @@
-package com.github.aklin.inventive.domain;
+package com.github.aklin.inventive.domain.core;
 
 /**
  * Describes an immutable (ie. geographic) location

@@ -1,6 +1,6 @@
 package com.github.aklin.inventive.domain.concrete.inventory;
 
-import com.github.aklin.inventive.domain.Locatable;
+import com.github.aklin.inventive.domain.core.Locatable;
 import com.github.aklin.inventive.domain.TypeInterface;
 
 public class TypeEntry implements TypeInterface {

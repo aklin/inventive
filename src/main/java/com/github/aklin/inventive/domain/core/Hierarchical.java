@@ -1,4 +1,4 @@
-package com.github.aklin.inventive.domain;
+package com.github.aklin.inventive.domain.core;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;

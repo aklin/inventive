@@ -1,16 +1,17 @@
 package com.github.aklin.inventive.domain.concrete.users;
 
-import com.github.aklin.inventive.domain.Identifiable;
+import com.github.aklin.inventive.domain.UserInterface;
 
-public class User implements Identifiable {
-
+public class User implements UserInterface {
 
 	private final long id;
+	private final String login;
 	private final String name;
 	private final String surname;
 
-	public User(long id, String name, String surname) {
+	public User(long id, String login, String name, String surname) {
 		this.id = id;
+		this.login = login;
 		this.name = name;
 		this.surname = surname;
 	}
@@ -20,15 +21,23 @@ public class User implements Identifiable {
 		return 0;
 	}
 
+	@Override
 	public String getName() {
+		return login;
+	}
+
+	@Override
+	public String getFirstName() {
 		return name;
 	}
 
-	public String getSurname() {
+	@Override
+	public String getLastName() {
 		return surname;
 	}
 
+	@Override
 	public String getFullName() {
-		return getName() + " " + getSurname();
+		return getFirstName() + " " + getLastName();
 	}
 }
