@@ -39,14 +39,19 @@
 		<!-- Sidebar Menu -->
 		<ul class="sidebar-menu" data-widget="tree">
 			<li class="header">SAVED ITEMS</li>
+			<li class="header" th:text="${#httpServletRequest.getRequestURI()}">SAVED ITEMS</li>
+
 			<!-- Optionally, you can add icons to the links -->
 			<li><a href="#"><i class="fa fa-star"></i> <span>Favourites</span></a></li>
 			<li><a href="#"><i class="fa fa-clock-o"></i> <span>Recent</span></a></li>
 			<li><a href="#"><i class="fa fa-search"></i> <span>Saved Searches</span></a></li>
 			<li class="header">INSPECT</li>
-			<li class="active"><a href="#"><i class="fa fa-building-o"></i> <span>Locations</span></a></li>
-			<li><a href="#"><i class="fa fa-tags"></i> <span>Types</span></a></li>
-			<li><a href="#"><i class="fa fa-link"></i> <span>Items</span></a></li>
+			<li th:class=" ${#strings.startsWith(#httpServletRequest.getRequestURI(), '/location')}  ? 'active'">
+				<a href="/locations"><i class="fa fa-building-o"></i> <span>Locations</span></a></li>
+			<li th:class=" ${#strings.startsWith(#httpServletRequest.getRequestURI(), '/type')} ? 'active'">
+				<a href="/types"><i class="fa fa-tags"></i> <span>Types</span></a></li>
+			<li th:class=" ${#strings.startsWith(#httpServletRequest.getRequestURI(), '/item')}? 'active'">
+				<a href="/items"><i class="fa fa-link"></i> <span>Items</span></a></li>
 			<li class="treeview">
 				<a href="#">
 					<i class="fa fa-link"></i>
