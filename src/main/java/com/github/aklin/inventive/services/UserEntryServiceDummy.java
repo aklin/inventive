@@ -1,5 +1,6 @@
 package com.github.aklin.inventive.services;
 
+import com.github.aklin.inventive.domain.UserInterface;
 import com.github.aklin.inventive.domain.concrete.users.User;
 import org.springframework.stereotype.Service;
 
@@ -7,7 +8,7 @@ import java.util.*;
 
 @Service
 public class UserEntryServiceDummy implements IUserEntryService {
-	private final Map<Long, User> users;
+	private final Map<Long, UserInterface> users;
 	private final long currentUser;
 
 	public UserEntryServiceDummy() {
@@ -50,17 +51,17 @@ public class UserEntryServiceDummy implements IUserEntryService {
 	}
 
 	@Override
-	public List<User> listAll() {
+	public List<UserInterface> listAll() {
 		return new ArrayList<>(users.values());
 	}
 
 	@Override
-	public User get(long id) {
+	public UserInterface get(long id) {
 		return users.get(id);
 	}
 
 	@Override
-	public User getCurrentlyLoggedIn() {
+	public UserInterface getCurrentlyLoggedIn() {
 		return users.get(currentUser);
 	}
 

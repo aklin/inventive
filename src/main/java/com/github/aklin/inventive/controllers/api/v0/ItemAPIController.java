@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
+@RestController("/api/v0/items")
 public class ItemAPIController {
 
 	private InventoryEntryService entryService;
@@ -18,7 +18,7 @@ public class ItemAPIController {
 		this.entryService = entryService;
 	}
 
-	@RequestMapping("/api/v0/items")
+	@RequestMapping(value = {"/", ""})
 	public List<InventoryEntry> index() {
 		return entryService.listAll();
 	}
