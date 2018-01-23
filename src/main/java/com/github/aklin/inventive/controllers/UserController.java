@@ -22,6 +22,6 @@ public class UserController {
 	public String listEntries(Model model) {
 		model.addAttribute("user", userService.getCurrentlyLoggedIn());
 		model.addAttribute("users", userService.listAll());
-		return "content/users";
+		return "content/users/users";
 	}
 }

@@ -69,10 +69,10 @@
 									</thead>
 
 									<tbody>
-									<tr th:for="user,iter : ${users}" role="row" th:class="${iter.odd}? 'odd' : 'even'">
-										<td class="sorting_1" th:text="${user.getID()}">User ID</td>
-										<td th:text="${user.getFirstName()}">User Firstname</td>
-										<td th:text="${user.getLastName()}">lastname</td>
+									<tr th:each="current, iter : ${users}" role="row" th:class="${iter.odd}? 'odd' : 'even'">
+										<td class="sorting_1" th:text="${current.getID()}">User ID</td>
+										<td th:text="${current.getFirstName()}">User Firstname</td>
+										<td th:text="${current.getLastName()}">lastname</td>
 										<td>actions</td>
 									</tr>
 									</tbody>

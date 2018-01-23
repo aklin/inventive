@@ -29,7 +29,7 @@ public class ItemEntryController {
 	public String listEntries(Model model) {
 		model.addAttribute("user", userService.getCurrentlyLoggedIn());
 		model.addAttribute("items", entryService.listAll());
-		return "content/items";
+		return "content/inv/items";
 	}
 
 	@RequestMapping("/item/{id}")
@@ -37,6 +37,6 @@ public class ItemEntryController {
 		model.addAttribute("user", userService.getCurrentlyLoggedIn());
 		model.addAttribute("items", entryService.listAll());
 		model.addAttribute("item", entryService.get(id));
-		return "content/item";
+		return "content/inv/item";
 	}
 }
