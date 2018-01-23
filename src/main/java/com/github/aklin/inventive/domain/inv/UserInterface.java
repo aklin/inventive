@@ -1,4 +1,4 @@
-package com.github.aklin.inventive.domain;
+package com.github.aklin.inventive.domain.inv;
 
 import com.github.aklin.inventive.domain.core.Identifiable;
 import com.github.aklin.inventive.domain.core.Nameable;
