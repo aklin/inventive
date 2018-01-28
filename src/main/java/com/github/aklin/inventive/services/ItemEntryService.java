@@ -2,6 +2,7 @@ package com.github.aklin.inventive.services;
 
 import com.github.aklin.inventive.domain.inv.InventoryEntry;
 import com.github.aklin.inventive.domain.concrete.inventory.v0.item.ItemEntry;
+import com.github.aklin.inventive.domain.inv.ItemInterface;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.Map;
 
 @Service
 public class ItemEntryService implements InventoryEntryService {
-	private Map<Long, InventoryEntry> entries;
+	private Map<Long, ItemInterface> entries;
 
 
 	public ItemEntryService() {
@@ -19,12 +20,12 @@ public class ItemEntryService implements InventoryEntryService {
 	}
 
 	@Override
-	public List<InventoryEntry> listAll() {
+	public List<ItemInterface> listAll() {
 		return new ArrayList<>(entries.values());
 	}
 
 	@Override
-	public InventoryEntry get(long id) {
+	public ItemInterface get(long id) {
 		return entries.get(id);
 	}
 

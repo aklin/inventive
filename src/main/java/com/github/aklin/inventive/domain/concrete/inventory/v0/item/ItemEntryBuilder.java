@@ -1,7 +1,7 @@
 package com.github.aklin.inventive.domain.concrete.inventory.v0.item;
 
-import com.github.aklin.inventive.domain.inv.InventoryEntry;
 import com.github.aklin.inventive.domain.inv.ItemBuilderInterface;
+import com.github.aklin.inventive.domain.inv.ItemInterface;
 import com.google.common.base.Strings;
 
 public class ItemEntryBuilder implements ItemBuilderInterface {
@@ -12,6 +12,16 @@ public class ItemEntryBuilder implements ItemBuilderInterface {
 	private String name;
 	private String description;
 
+
+	@Override
+	public ItemBuilderInterface from(ItemInterface template) {
+		return setID(template.getID())
+				.setName(template.getName())
+				.setDescription(template.getDescription())
+				.setContainer(template.getParent() == null
+						? 0
+						: template.getParent().getID());
+	}
 
 	@Override
 	public ItemBuilderInterface setID(long id) {
@@ -44,7 +54,7 @@ public class ItemEntryBuilder implements ItemBuilderInterface {
 	}
 
 	@Override
-	public InventoryEntry create() {
+	public ItemInterface create() {
 		return new ItemEntry(id, name, description);
 	}
 }

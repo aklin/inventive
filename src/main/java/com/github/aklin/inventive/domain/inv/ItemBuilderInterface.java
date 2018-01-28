@@ -2,6 +2,14 @@ package com.github.aklin.inventive.domain.inv;
 
 public interface ItemBuilderInterface {
 
+	/**
+	 * Use parameter as template. Calling {@link #create()} directly
+	 * afterwards effectively clones the item
+	 *
+	 * @param template
+	 * @return
+	 */
+	public ItemBuilderInterface from(ItemInterface template);
 
 	/**
 	 * Set container ID
@@ -51,5 +59,5 @@ public interface ItemBuilderInterface {
 	 *
 	 * @return
 	 */
-	public InventoryEntry create();
+	public ItemInterface create();
 }

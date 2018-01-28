@@ -1,7 +1,7 @@
 package com.github.aklin.inventive.services;
 
-import com.github.aklin.inventive.domain.inv.TypeInterface;
 import com.github.aklin.inventive.domain.concrete.inventory.v0.type.TypeEntry;
+import com.github.aklin.inventive.domain.inv.TypeInterface;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -30,5 +30,10 @@ public class TypeEntryService implements TypeEntryServiceInterface {
 	@Override
 	public TypeInterface get(long id) {
 		return types.get(id);
+	}
+
+	@Override
+	public TypeInterface getDefaultType() {
+		return get(0);
 	}
 }
