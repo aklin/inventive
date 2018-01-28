@@ -6,7 +6,9 @@ import com.github.aklin.inventive.domain.inv.TypeInterface;
 import com.github.aklin.inventive.services.ContainerServiceInterface;
 import com.github.aklin.inventive.services.TypeEntryServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ContainerBuilder implements ContainerBuilderInterface {
 
 	private long id;

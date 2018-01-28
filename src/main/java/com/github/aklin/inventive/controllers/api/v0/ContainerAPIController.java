@@ -1,6 +1,5 @@
 package com.github.aklin.inventive.controllers.api.v0;
 
-import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.github.aklin.inventive.domain.inv.ContainerInterface;
 import com.github.aklin.inventive.services.ContainerServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,13 +16,10 @@ import java.util.List;
 public class ContainerAPIController {
 
 	private final ContainerServiceInterface containerService;
-	private final JsonDeserializer<ContainerInterface> containerDeserializer;
 
 	@Autowired
-	public ContainerAPIController(ContainerServiceInterface containerService,
-	                              JsonDeserializer<ContainerInterface> deserializer) {
+	public ContainerAPIController(ContainerServiceInterface containerService) {
 		this.containerService = containerService;
-		this.containerDeserializer = deserializer;
 	}
 
 	@RequestMapping("/containers")

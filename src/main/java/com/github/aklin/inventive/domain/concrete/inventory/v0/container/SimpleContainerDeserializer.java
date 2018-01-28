@@ -9,10 +9,11 @@ import com.github.aklin.inventive.domain.inv.ContainerInterface;
 import com.google.common.base.Strings;
 import com.google.common.primitives.Longs;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
-
+@Component
 public class SimpleContainerDeserializer extends JsonDeserializer<ContainerInterface> {
 
 	private ContainerBuilderInterface builder;
@@ -21,17 +22,6 @@ public class SimpleContainerDeserializer extends JsonDeserializer<ContainerInter
 	public void setBuilder(ContainerBuilderInterface builder) {
 		this.builder = builder;
 	}
-/*
-
-	public SimpleContainerDeserializer() {
-		this(null);
-	}
-
-
-	public SimpleContainerDeserializer(Class<?> vc) {
-		super(vc);
-	}
-*/
 
 
 	@Override
