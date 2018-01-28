@@ -1,7 +1,7 @@
 package com.github.aklin.inventive.services;
 
 import com.github.aklin.inventive.domain.inv.ContainerInterface;
-import com.github.aklin.inventive.domain.concrete.inventory.SimpleContainer;
+import com.github.aklin.inventive.domain.concrete.inventory.v0.container.SimpleContainer;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

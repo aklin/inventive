@@ -1,4 +1,4 @@
-package com.github.aklin.inventive.domain.concrete.inventory;
+package com.github.aklin.inventive.domain.concrete.inventory.v0.item;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

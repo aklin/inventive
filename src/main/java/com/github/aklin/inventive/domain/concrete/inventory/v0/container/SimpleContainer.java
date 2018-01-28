@@ -1,9 +1,11 @@
-package com.github.aklin.inventive.domain.concrete.inventory;
+package com.github.aklin.inventive.domain.concrete.inventory.v0.container;
 
-import com.github.aklin.inventive.domain.inv.ContainerInterface;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.github.aklin.inventive.domain.core.Locatable;
+import com.github.aklin.inventive.domain.inv.ContainerInterface;
 import com.github.aklin.inventive.domain.inv.TypeInterface;
 
+@JsonDeserialize(using = SimpleContainerDeserializer.class)
 public class SimpleContainer implements ContainerInterface {
 
 	private final long id;
