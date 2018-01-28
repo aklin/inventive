@@ -2,6 +2,7 @@ package com.github.aklin.inventive.controllers.api.v0;
 
 import com.github.aklin.inventive.domain.inv.ItemInterface;
 import com.github.aklin.inventive.services.InventoryEntryService;
+import com.github.aklin.inventive.services.ItemActionHandlerInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,14 +12,16 @@ import java.util.List;
 @RequestMapping("/api/v0/items")
 public class ItemAPIController {
 
-	private InventoryEntryService entryService;
+	private final InventoryEntryService entryService;
+	private final ItemActionHandlerInterface actions;
 
 	@Autowired
-	public void setEntryService(InventoryEntryService entryService) {
+	public ItemAPIController(InventoryEntryService entryService, ItemActionHandlerInterface actions) {
 		this.entryService = entryService;
+		this.actions = actions;
 	}
 
-	@RequestMapping(value = {"/", ""})
+	@RequestMapping(value = {"/", ""}, method = RequestMethod.GET)
 	public List<ItemInterface> index() {
 		return entryService.listAll();
 	}
@@ -28,15 +31,14 @@ public class ItemAPIController {
 		return entryService.get(id);
 	}
 
-	@RequestMapping(value = "/", method = RequestMethod.PUT)
+	@RequestMapping(value = {"/", ""}, method = RequestMethod.PUT)
 	public ItemInterface create(@RequestBody ItemInterface item) {
 
-		return item;
+		return actions.create(item);
 	}
 
-	@RequestMapping(value = "/", method = RequestMethod.POST)
+	@RequestMapping(value = {"/", ""}, method = RequestMethod.POST)
 	public ItemInterface update(@RequestBody ItemInterface item) {
-
-		return item;
+		return actions.update(item);
 	}
 }

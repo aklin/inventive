@@ -3,7 +3,9 @@ package com.github.aklin.inventive.domain.concrete.inventory.v0.item;
 import com.github.aklin.inventive.domain.inv.ItemBuilderInterface;
 import com.github.aklin.inventive.domain.inv.ItemInterface;
 import com.google.common.base.Strings;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ItemEntryBuilder implements ItemBuilderInterface {
 
 	private long id;
