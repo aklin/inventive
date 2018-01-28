@@ -1,7 +1,7 @@
 package com.github.aklin.inventive.services;
 
 import com.github.aklin.inventive.domain.inv.TypeInterface;
-import com.github.aklin.inventive.domain.concrete.inventory.TypeEntry;
+import com.github.aklin.inventive.domain.concrete.inventory.v0.type.TypeEntry;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

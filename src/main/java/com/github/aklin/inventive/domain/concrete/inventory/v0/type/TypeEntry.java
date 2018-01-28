@@ -1,4 +1,4 @@
-package com.github.aklin.inventive.domain.concrete.inventory;
+package com.github.aklin.inventive.domain.concrete.inventory.v0.type;
 
 import com.github.aklin.inventive.domain.core.Locatable;
 import com.github.aklin.inventive.domain.inv.TypeInterface;

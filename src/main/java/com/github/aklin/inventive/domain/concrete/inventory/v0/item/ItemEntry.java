@@ -24,7 +24,7 @@ public class ItemEntry implements InventoryEntry {
 	@JsonCreator
 	public ItemEntry(@JsonProperty("id") long id, @JsonProperty("name") String name, @JsonProperty("description") String description) {
 
-		if (id < 1) {
+		if (id < 0) {
 			throw new IllegalArgumentException("ID must be greater than 0");
 		}
 
