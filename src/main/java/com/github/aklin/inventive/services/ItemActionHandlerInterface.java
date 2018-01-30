@@ -4,7 +4,8 @@ import com.github.aklin.inventive.domain.inv.ItemInterface;
 
 public interface ItemActionHandlerInterface {
 
-	public ItemInterface create(ItemInterface candidate);
+	ItemInterface create(final ItemInterface candidate);
 
-	public ItemInterface update(ItemInterface item);
+	ItemInterface update(final ItemInterface item);
+
 }

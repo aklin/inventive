@@ -6,7 +6,16 @@ import java.util.List;
 
 public interface InventoryEntryService {
 
-	public List<ItemInterface> listAll();
+	List<ItemInterface> listAll();
 
-	public ItemInterface get(long id);
+	ItemInterface get(long id);
+
+	/**
+	 * Added in lieu of persistence. Remove once persistence layer is up.
+	 *
+	 * @param item
+	 * @return
+	 */
+	@Deprecated
+	InventoryEntryService add(final ItemInterface item);
 }

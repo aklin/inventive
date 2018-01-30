@@ -30,6 +30,7 @@ public class ItemActionHandler implements ItemActionHandlerInterface {
 				.create();
 
 		//TODO persist item
+		service.add(newItem);
 
 		return newItem;
 	}
