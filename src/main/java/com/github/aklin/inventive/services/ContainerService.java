@@ -1,7 +1,7 @@
 package com.github.aklin.inventive.services;
 
-import com.github.aklin.inventive.domain.inv.ContainerInterface;
 import com.github.aklin.inventive.domain.concrete.inventory.v0.container.SimpleContainer;
+import com.github.aklin.inventive.domain.inv.ContainerInterface;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -19,8 +19,8 @@ public class ContainerService implements ContainerServiceInterface {
 
 		for (long i = 1; i < 15; i++) {
 			entries.put(i, new SimpleContainer(i,
-					"Item " + i,
-					"This is item number " + i,
+					"Container " + i,
+					"This is container #" + i,
 					null,
 					null));
 		}
