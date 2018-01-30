@@ -32,7 +32,7 @@ public class ItemEntryController {
 		return "content/inv/items";
 	}
 
-	@RequestMapping("/item/{id}")
+	@RequestMapping("/items/{id}")
 	public String listEntry(@PathVariable long id, Model model) {
 		model.addAttribute("user", userService.getCurrentlyLoggedIn());
 		model.addAttribute("items", entryService.listAll());
